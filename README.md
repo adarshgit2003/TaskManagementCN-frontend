@@ -10,4 +10,4 @@ The app is hosted on Render. You can access it by going to the following link:
 3. Run `npm run start` in the root directory
 4. Go to `localhost:3000` in your browser
 
-Designed and developed by: **Abhishek Rawat**
+Designed and developed by: **Adarsh Kumar Shrivastav**
