@@ -1,0 +1,77 @@
+<div class="backdrop">
+  <div class="add-task">
+    <div class="heading">
+      <h1 class="d-flex justify-content-center">Add a New Task</h1>
+      <p class="d-flex justify-content-center">Fill the task details and click on create task to create a new task</p>
+    </div>
+    <form (ngSubmit)="onSubmit(addTaskForm)" class="body" #addTaskForm="ngForm">
+      <div class="row mb-3">
+        <label class="form-label" for="name"
+          >Name of Task<span class="text-danger"> * </span></label
+        >
+        <input
+          class="form-control"
+          type="text"
+          name="title"
+          id="name"
+          ngModel
+          required
+        />
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label class="form-label" for="status">Status</label>
+          <select
+            style="font-size: 1.4rem"
+            class="form-select"
+            name="status"
+            id="status"
+            ngModel
+          >
+            <option value="to-do">To-DO</option>
+            <option value="in-progress">In-Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+          
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label" for="Priority"> Priority Level </label>
+          <select
+            style="font-size: 1.4rem"
+            class="form-select"
+            name="Priority"
+            id="Priority"
+            ngModel
+          >
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label" for="date">Due Date</label>
+          <input class="form-control" type="date" name="date" id="" ngModel />
+        </div>
+      
+      </div>
+      <div class="row mb-1">
+        <label class="form-label" for="notes">Task Description</label>
+        <textarea class="form-control" name="notes" id="" rows="4" ngModel>
+        </textarea>
+      </div>
+      <div *ngIf="success" class="alert alert-success mb-3">
+        <h3>Task Added Successfully</h3>
+      </div>
+      <div *ngIf="failed" class="alert alert-danger mb-3">
+        <h3>Failed to Add Task</h3>
+      </div>
+      <button type="submit" class="btn btn-primary me-3">Create Task</button>
+      <button type="button" class="btn btn-danger" (click)="onClose()">
+        Close
+      </button>
+    </form>
+  </div>
+</div>

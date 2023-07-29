@@ -1,0 +1,251 @@
+main {
+  width: 100vw;
+  height: 50vh;
+  padding: 0.8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.8rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p {
+  font-size: 3rem;
+  margin-bottom: 1.8rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.tasks {
+  width: 95vw;
+  max-height: 85vh;
+  margin: 2.5vh auto;
+  padding: 1.2rem;
+  gap: 1.2rem;
+
+}
+
+.tasks-info {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+  align-items: center;
+}
+
+.tasks-panel {
+  padding: 2.4rem;
+  height: auto;
+}
+
+.tasks-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+  
+}
+
+.csvButton{
+  margin-left: 1.2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-task {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  border: 1px solid gray;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.add-task:hover {
+  fill: white;
+  background-color: #38b6ff;
+}
+
+.search-task {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  align-items: center;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid gray;
+  border-radius: 0.8rem;
+}
+
+.search-task input {
+  font-size: 1.8rem;
+  border: none;
+}
+
+.sort-task {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.sort-task select {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.8rem;
+}
+
+.tasks-container {
+  height: 55vh;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  column-gap: 1.2rem;
+  row-gap: 3.2rem;
+}
+
+.tasks-card {
+  border: 1px solid black;
+  max-width: 400px;
+}
+
+.title,
+.card-body {
+  padding: 2.4rem;
+}
+
+.title {
+  border-bottom: 1px solid rgb(163, 163, 163);
+  background-color: rgb(125, 199, 255)
+}
+
+.title h2 {
+  font-size: 3rem;
+}
+
+.notes {
+  margin-bottom: 2.4rem;
+  width: 100%;
+  height: 80px;
+}
+
+.notes h3 {
+  font-size: 2.2rem;
+}
+
+.notes p {
+  font-size: 1.8rem;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.status span {
+  font-size: 1.6rem;
+}
+
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.date svg {
+  fill: #222;
+}
+
+.date span {
+  font-size: 1.6rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit {
+  font-size: 1.4rem;
+  padding: 1rem 1.8rem;
+}
+.delete {
+  font-size: 1.4rem;
+  padding: 1rem 1.8rem;
+}
+
+
+
+/* jumbotron color animation css */
+.jumbotron {
+  width: 30wh;
+  height: 30vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+ 
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+ 
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+ 
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.addStyle{
+  margin-top: "-8px";
+  height: 200px;
+}
+
+@media(max-width: 600px){
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 2.2rem;
+    margin-bottom: 3.2rem;
+  }
+}

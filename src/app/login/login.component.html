@@ -1,0 +1,48 @@
+<main class="container">
+  <div class="container-fluid jumbotron addStyle">
+    <div class="row">
+      <div class="col text-center p-5">
+          <h1 class="fw-bold">Hello User</h1>
+          <p class="lead">Welcome to Task Management App</p>
+      </div>
+  </div>
+  </div>
+  <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" class="shadow-lg">
+    <h1>Log In</h1>
+    <div *ngIf="invalidCredentials" class="alert alert-warning">
+      <p>Invalid Credentials, email/password incorrect</p>
+    </div>
+    <div *ngIf="serverSide" class="alert alert-danger">
+      <p>Something went wrong on our servers :(</p>
+    </div>
+    <div *ngIf="userNotFound" class="alert alert-primary">
+      <p>User does not exist</p>
+    </div>
+    <input
+      type="email"
+      placeholder="Enter your email"
+      name="email"
+      class="form-control"
+      required
+      ngModel
+    />
+    <input
+      type="password"
+      placeholder="Enter your password"
+      name="password"
+      class="form-control"
+      required
+      ngModel
+    />
+    <button type="submit" class="btn btn-primary btn-lg" [disabled]="!loginForm.valid">
+      LOGIN
+    </button>
+    <div class="additional-section">
+      <h2>Not have an account</h2>
+      <span> - </span>
+      <hr/>
+      <a routerLink="/register"><button class="text-white b btn btn-warning btn-sm apply">CREATE</button>
+      </a>
+    </div>
+  </form>
+</main>
